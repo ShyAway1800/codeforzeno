@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Components/InputComponent.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/WorldSettings.h"
 #include "MyFPCharacter.generated.h"
 
 UCLASS()
@@ -36,9 +37,13 @@ public:
 	void VertRot(float value);
 
 	void CheckJump();
+	AWorldSettings* worldSettings;
 
 	UPROPERTY()
+	{
 		bool jumping;
+		bool gravitySwitch;
+	}
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
 		UCameraComponent* cam;

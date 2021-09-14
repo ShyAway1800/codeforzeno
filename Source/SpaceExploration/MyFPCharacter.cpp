@@ -18,6 +18,10 @@ AMyFPCharacter::AMyFPCharacter()
 	cam->SetRelativeLocation(FVector(0, 0, 40));
 
 	jumping = false;
+	worldSettings = GetWorldSettings();
+	worldSettings->bGlobalGravitySet = true;
+	worldSettings->GlobalGravityZ = -980.0f;
+	gravitySwitch = true;
 }
 
 // Called when the game starts or when spawned
